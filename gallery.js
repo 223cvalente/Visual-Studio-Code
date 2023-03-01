@@ -122,7 +122,19 @@ function swapPhoto(){
     mCurrentIndex = mImages.length-1
   }
 
+
+
+document.getElementById('photo').src = mImages[mCurrentIndex].img;
+var loc = document.getElementsByClassName('location');
+loc[0].innerHTML = "location: " + mImages[mCurrentIndex].location;
+var des = document.getElementsByClassName('description');
+des[0].innerHTML = "description: "+mImages[mCurrentIndex].description;
+var dt = document.getElementsByClassName('date');
+dit[0].innerHTML = "Date: " +mImages[mCurrentIndex].date;
+
+
+mLastFrameTime = 0;
+mCurrentIndex += 1; 
 }
 
 
-document.getElementById
