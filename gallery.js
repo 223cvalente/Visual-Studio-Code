@@ -121,5 +121,8 @@ function swapPhoto(){
   {
     mCurrentIndex = mImages.length-1
   }
-  )
+
 }
+
+
+document.getElementById
