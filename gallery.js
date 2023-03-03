@@ -174,5 +174,3 @@ at: "right bottom",
 of: "#nav"
 
 });
-
-}
