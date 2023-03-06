@@ -19,15 +19,26 @@
       <img class="moreIndicator rot90" src="img/more.png" alt="More Content"/>
       <div id="nav">
         <img id="prevPhoto" class='rot180' src="img/arrow.png" alt="Previous Photo"/>
-        <img id="nextPhoto" src="img/arrow.png" alt="Next Photo"/>
+        <img id="nextPhoto" src="img/arrow.png" alt="Next Photo" />
       </div>
       <div class="details">
         <p class="location">Location: </p>
         <p class="description">Description: </p>
         <p class="date">Date: </p>
       </div>
-
+    
     </div>
   </div>
+  <script>
+    $("prevPhoto" ).click(function(){
+      mCurrentIndex-=2;
+      swapPhoto();
+    });
+  </script>
+     <script>
+    $("#nextPhoto" ).click(function(){
+      swapPhoto();
+    });
+   </script>
 </body>
 </html>
