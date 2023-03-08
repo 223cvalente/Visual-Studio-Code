@@ -1,31 +1,31 @@
 {
     "images": [
         {
-            "imgPath": "img/places/australia.jpg",
+            "imgPath": "https://www.state.gov/wp-content/uploads/2022/02/shutterstock_1025960785-2560x1300.jpg",
             "imgLocation": "Australia",
             "description": "Loch Ard Gorge",
             "date": "01/01/2016"
         },
         {
-            "imgPath": "img/places/austria.jpg",
+            "imgPath": "https://cdn.britannica.com/20/191120-050-B6C0B7E9/village-Hallstatt-Alps-Austria.jpg",
             "imgLocation": "Austria",
             "description": "Austrian chapel",
             "date": "01/02/2016"
         },
         {
-            "imgPath": "img/places/france.jpg",
+            "imgPath": "https://i.natgeofe.com/k/04665f4a-3f8d-4b62-8ca3-09ce7dfc5a20/france-eiffel-tower_4x3.jpg",
             "imgLocation": "Paris",
             "description": "Eiffel Tower",
             "date": "01/03/2016"
         },
         {
-            "imgPath": "img/places/greece.jpg",
+            "imgPath": "https://www.travelandleisure.com/thmb/CwASoPDthL_sRQW6yA-qh-zJPlg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/santorini-POINTSGREECE0617-8cd08e70fec4471b8827dca8627b8eae.jpg",
             "imgLocation": "Greece",
             "description": "Greek coastline",
             "date": "01/04/2016"
         },
         {
-            "imgPath": "img/places/hungary.jpg",
+            "imgPath": "https://www.state.gov/wp-content/uploads/2018/11/Hungary-2109x1406.jpg",
             "imgLocation": "Hungary",
             "description": "Budapest skyline",
             "date": "01/05/2016"
