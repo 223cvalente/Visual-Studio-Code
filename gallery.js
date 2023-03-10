@@ -31,29 +31,30 @@ mLastFrameTime = currentTime;
 }
 
 /************* DO NOT TOUCH CODE ABOVE THIS LINE ***************/
+
   function swapPhoto(){
     if(mCurrentIndex >= mImages.length)
     {
-    mCurrentIndex= 0;
+    mCurrentIndex = 0;
     
     }
-    if(mCurrentIndex < 0)
-    {
-    mCurrentIndex = mImages.length-1;
+    if(mCurrentIndex < 0){
+       mCurrentIndex = mImages.length-1;
     }
 
-    document.getElementById('photo').src = mImages[mCurrentIndex].img;
+    document.getElementById("photo").src = mJson.images[mCurrentIndex].imgPath;
 var loc = document.getElementsByClassName('location');
-loc[0].innerHTML = "Location: " + mImages[mCurrentIndex].location;
+loc[0].innerHTML = "Location: " + mJson[mCurrentIndex].location;
 var des = document.getElementsByClassName('description');
-des[0].innerHTML = "Description: "+mImages[mCurrentIndex].description;
+des[0].innerHTML = "Description: "+ mJson[mCurrentIndex].description;
 var dt = document.getElementsByClassName('date');
-dit[0].innerHTML = "Date: " +mImages[mCurrentIndex].date;
+dt[0].innerHTML = "Date: " + mJson[mCurrentIndex].date;
 
 
 mLastFrameTime = 0;
 mCurrentIndex += 1; 
 }
+
 function toggleDetails(){
   if($(".moreIndicator").hasClass("rot90"))
   {
@@ -82,23 +83,21 @@ var mJson;
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl;
+var mUrl = 'images.json';
 
 
-function fetchJSON(){
-  mRequest.onreadystatechange = function(){
-  console.log("on ready state change");
-  if(this.readyState == 4 && this.status == 200){
-    mJson = JSON.parse(mRequest.responseText);
-    iterateJSON(mJson);
-  }
+function fetchJSON() {
+  mRequest.onreadystatechange = function() {
+    console.log("ready state change!");
+    if (this.readyState == 4 && this.status == 200) {
+      mJson = JSON.parse(mRequest.responseText);
+      iterateJSON(mJson);
+    }
   }
   mRequest.open("GET", mUrl, true);
   mRequest.send();
-  }
+}
 
-  function ilertateJSON(mJson)
-{
 for (x = 0; x < mJson.images.length; x++ )
 {
 mImages[x] = new GalleryImage();
@@ -107,7 +106,6 @@ mImages[x].description =  mJson.images[x].description;
 mImages[x].date=  mJson.images[x].date
 mImages[x].img =  mJson.images[x].imgPath;
 
-}
 }
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
