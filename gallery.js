@@ -41,9 +41,9 @@ function swapPhoto(){
     mCurrentIndex = mImages.length-1;
   }
   
-  document.getElementById("photo").src = mJson.images[mCurrentIndex].imgPath;
+  document.getElementById('photo').src = mJson.images[mCurrentIndex].imgPath;
   var loc = document.getElementsByClassName('location');
-  loc[0].innerHTML = "Location: "+ mJson.images[mCurrentIndex].location;
+  loc[0].innerHTML = "Location: "+ mJson.images[mCurrentIndex].imgLocation;
   var des = document.getElementsByClassName('description');
   des[0].innerHTML = "Description: "+ mJson.images[mCurrentIndex].description;
   var dt = document.getElementsByClassName('date');
